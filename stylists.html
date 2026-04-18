@@ -19,17 +19,17 @@
 </head>
 <body class="antialiased">
     <nav class="w-full py-8 px-8 md:px-16 flex justify-between items-center text-white border-b border-white/10">
-        <a href="/" class="text-2xl font-medium serif tracking-[0.15em]">AT 66</a>
+        <a href="index.html" class="text-2xl font-medium serif tracking-[0.15em]">AT 66</a>
         <div class="hidden md:flex space-x-12 text-xs uppercase tracking-[0.2em]">
-            <a href="/services.html" class="hover:text-rose-300 transition duration-300">Services</a>
-            <a href="/stylists.html" class="text-rose-300 transition duration-300">Stylists</a>
-            <a href="/contact.html" class="hover:text-rose-300 transition duration-300">Contact</a>
+            <a href="services.html" class="hover:text-rose-300 transition duration-300">Services</a>
+            <a href="stylists.html" class="text-rose-300 transition duration-300">Stylists</a>
+            <a href="contact.html" class="hover:text-rose-300 transition duration-300">Contact</a>
         </div>
     </nav>
     <main class="py-24 px-8 md:px-16 max-w-4xl mx-auto text-center">
         <h1 class="serif text-5xl mb-12 text-rose-100">Meet The Stylists</h1>
         <p class="font-light text-gray-400 mb-16">Bios and portfolios of our lead artisans go here.</p>
-        <a href="/" class="border border-white/50 px-6 py-3 text-xs uppercase tracking-widest hover:bg-white hover:text-black transition duration-500">Back Home</a>
+        <a href="index.html" class="border border-white/50 px-6 py-3 text-xs uppercase tracking-widest hover:bg-white hover:text-black transition duration-500">Back Home</a>
     </main>
 
     <script>
@@ -37,7 +37,7 @@
             requestAnimationFrame(() => {
                 setTimeout(() => document.body.classList.add('loaded'), 50);
             });
-            document.querySelectorAll('a[href^="/"]').forEach(link => {
+            document.querySelectorAll('a[href".html"]').forEach(link => {
                 link.addEventListener('click', e => {
                     e.preventDefault();
                     const target = link.getAttribute('href');

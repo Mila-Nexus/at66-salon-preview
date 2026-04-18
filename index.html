@@ -54,9 +54,9 @@
     <nav class="absolute w-full z-20 top-0 py-8 px-8 md:px-16 flex justify-between items-center mix-blend-difference text-white">
         <div class="text-2xl font-medium serif tracking-[0.15em]">AT 66</div>
         <div class="hidden md:flex space-x-12 text-xs uppercase tracking-[0.2em]">
-            <a href="/services.html" class="hover:text-rose-300 transition duration-300">Services</a>
-            <a href="/stylists.html" class="hover:text-rose-300 transition duration-300">Stylists</a>
-            <a href="/contact.html" class="hover:text-rose-300 transition duration-300">Contact</a>
+            <a href="services.html" class="hover:text-rose-300 transition duration-300">Services</a>
+            <a href="stylists.html" class="hover:text-rose-300 transition duration-300">Stylists</a>
+            <a href="contact.html" class="hover:text-rose-300 transition duration-300">Contact</a>
         </div>
         <button class="border border-white/50 px-6 py-2 text-xs uppercase tracking-widest hover:bg-white hover:text-black transition duration-500">Book Now</button>
     </nav>
@@ -118,7 +118,7 @@
                 <img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Products" class="w-full h-64 object-cover rounded-sm opacity-80 hover:opacity-100 transition duration-500">
             </div>
             <div class="mt-16 flex justify-center">
-                <a href="/stylists.html" class="border-b border-rose-300 text-rose-300 pb-1 uppercase tracking-widest text-xs hover:text-white hover:border-white transition">Meet The Team</a>
+                <a href="stylists.html" class="border-b border-rose-300 text-rose-300 pb-1 uppercase tracking-widest text-xs hover:text-white hover:border-white transition">Meet The Team</a>
             </div>
         </div>
     </section>
@@ -143,7 +143,7 @@
             requestAnimationFrame(() => {
                 setTimeout(() => document.body.classList.add('loaded'), 50);
             });
-            document.querySelectorAll('a[href^="/"]').forEach(link => {
+            document.querySelectorAll('a[href".html"]').forEach(link => {
                 link.addEventListener('click', e => {
                     e.preventDefault();
                     const target = link.getAttribute('href');
