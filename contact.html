@@ -32,19 +32,11 @@
         <a href="index.html" class="border border-white/50 px-6 py-3 text-xs uppercase tracking-widest hover:bg-white hover:text-black transition duration-500">Back Home</a>
     </main>
 
+    
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             requestAnimationFrame(() => {
                 setTimeout(() => document.body.classList.add('loaded'), 50);
-            });
-            document.querySelectorAll('a[href".html"]').forEach(link => {
-                link.addEventListener('click', e => {
-                    e.preventDefault();
-                    const target = link.getAttribute('href');
-                    document.body.classList.remove('loaded');
-                    document.body.classList.add('exiting');
-                    setTimeout(() => window.location.href = target, 400);
-                });
             });
         });
     </script>

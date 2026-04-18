@@ -129,12 +129,12 @@
     </footer>
 
     <!-- Init Vanilla Tilt (already handled by data-attributes, but this ensures smooth loading) -->
+    
     <script>
-        VanillaTilt.init(document.querySelectorAll(".glass-card"), {
-            max: 15,
-            speed: 400,
-            glare: true,
-            "max-glare": 0.15,
+        document.addEventListener('DOMContentLoaded', () => {
+            requestAnimationFrame(() => {
+                setTimeout(() => document.body.classList.add('loaded'), 50);
+            });
         });
     </script>
 
