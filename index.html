@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>At 66 Hair & Lifestyle</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Jost:wght@300;400;500&display=swap');
+        body { font-family: 'Jost', sans-serif; background-color: #0a0a0a; color: #f5f5f5; overflow-x: hidden;}
+        h1, h2, h3, .serif { font-family: 'Cinzel', serif; }
+        
+        /* Subtle continuous zoom for hero */
+        @keyframes subtleZoom {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.05); }
+        }
+        .hero-img {
+            animation: subtleZoom 20s infinite alternate ease-in-out;
+        }
+
+        /* Float animation for elements */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        /* 3D Glass Card styling */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border-top: 1px solid rgba(255,255,255,0.1);
+            border-left: 1px solid rgba(255,255,255,0.1);
+            transform-style: preserve-3d;
+            transition: all 0.5s ease;
+        }
+        
+        .glass-card-content {
+            transform: translateZ(40px); /* Pushes content out in 3D space */
+        }
+    </style>
+
+    <style>
+        body { opacity: 0; transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1), transform 0.7s cubic-bezier(0.22, 1, 0.36, 1); transform: scale(0.97); }
+        body.loaded { opacity: 1; transform: scale(1); }
+        body.exiting { opacity: 0; transform: scale(1.03); transition: opacity 0.4s ease-in, transform 0.4s ease-in; }
+    </style>
+</head>
+<body class="antialiased selection:bg-rose-400 selection:text-white">
+
+    <!-- Navbar -->
+    <nav class="absolute w-full z-20 top-0 py-8 px-8 md:px-16 flex justify-between items-center mix-blend-difference text-white">
+        <div class="text-2xl font-medium serif tracking-[0.15em]">AT 66</div>
+        <div class="hidden md:flex space-x-12 text-xs uppercase tracking-[0.2em]">
+            <a href="/services.html" class="hover:text-rose-300 transition duration-300">Services</a>
+            <a href="/stylists.html" class="hover:text-rose-300 transition duration-300">Stylists</a>
+            <a href="/contact.html" class="hover:text-rose-300 transition duration-300">Contact</a>
+        </div>
+        <button class="border border-white/50 px-6 py-2 text-xs uppercase tracking-widest hover:bg-white hover:text-black transition duration-500">Book Now</button>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative h-screen flex flex-col justify-center items-center text-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1600948836101-f9ffda59d250?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80" class="hero-img w-full h-full object-cover opacity-60" alt="Salon Aesthetic">
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-black/30 to-[#0a0a0a]"></div>
+        </div>
+        
+        <div class="relative z-10 flex flex-col items-center" style="animation: float 6s ease-in-out infinite;">
+            <p class="text-rose-300 text-xs uppercase tracking-[0.3em] mb-4">Hair & Lifestyle</p>
+            <h1 class="text-5xl md:text-8xl text-white mb-8 serif font-light tracking-wide drop-shadow-2xl">Elevate Your<br>Aesthetic.</h1>
+        </div>
+    </header>
+
+    <!-- Services 3D Grid -->
+    <section class="py-24 px-8 md:px-16 max-w-7xl mx-auto relative z-10 -mt-20">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            <!-- 3D Card 1 -->
+            <div class="glass-card p-10 rounded-xl flex flex-col items-center text-center cursor-pointer" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-perspective="1000" data-tilt-glare="true" data-tilt-max-glare="0.2">
+                <div class="glass-card-content">
+                    <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Cut" class="w-24 h-24 rounded-full object-cover mb-6 shadow-2xl mx-auto border border-white/20">
+                    <h3 class="serif text-2xl mb-3 text-rose-100">Bespoke Cuts</h3>
+                    <p class="text-gray-400 font-light text-sm">Tailored styling reflecting your unique identity and bone structure.</p>
+                </div>
+            </div>
+
+            <!-- 3D Card 2 -->
+            <div class="glass-card p-10 rounded-xl flex flex-col items-center text-center cursor-pointer mt-0 md:mt-12" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-perspective="1000" data-tilt-glare="true" data-tilt-max-glare="0.2">
+                <div class="glass-card-content">
+                    <img src="https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Colour" class="w-24 h-24 rounded-full object-cover mb-6 shadow-2xl mx-auto border border-white/20">
+                    <h3 class="serif text-2xl mb-3 text-rose-100">Colour Artistry</h3>
+                    <p class="text-gray-400 font-light text-sm">Dimensional balayage and vivid tones using premium vegan products.</p>
+                </div>
+            </div>
+
+            <!-- 3D Card 3 -->
+            <div class="glass-card p-10 rounded-xl flex flex-col items-center text-center cursor-pointer" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-perspective="1000" data-tilt-glare="true" data-tilt-max-glare="0.2">
+                <div class="glass-card-content">
+                    <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Treatment" class="w-24 h-24 rounded-full object-cover mb-6 shadow-2xl mx-auto border border-white/20">
+                    <h3 class="serif text-2xl mb-3 text-rose-100">Lifestyle Care</h3>
+                    <p class="text-gray-400 font-light text-sm">Restorative treatments and scalp therapies for enduring health.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Testimonials / Vibe Section -->
+    <section class="py-24 px-8 md:px-16 bg-[#0f0f0f] relative z-10">
+        <div class="max-w-5xl mx-auto text-center">
+            <h2 class="serif text-4xl text-white mb-12 font-light">"More than a salon. It's a sanctuary."</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <img src="https://images.unsplash.com/photo-1600948836101-f9ffda59d250?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Salon Interior" class="w-full h-64 object-cover rounded-sm opacity-80 hover:opacity-100 transition duration-500">
+                <img src="https://images.unsplash.com/photo-1560869713-7d0a29430803?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Hair Details" class="w-full h-64 object-cover rounded-sm opacity-80 hover:opacity-100 transition duration-500">
+                <img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Products" class="w-full h-64 object-cover rounded-sm opacity-80 hover:opacity-100 transition duration-500">
+            </div>
+            <div class="mt-16 flex justify-center">
+                <a href="/stylists.html" class="border-b border-rose-300 text-rose-300 pb-1 uppercase tracking-widest text-xs hover:text-white hover:border-white transition">Meet The Team</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 py-12 px-8 text-center text-gray-500 text-xs tracking-widest uppercase relative z-10">
+        <p>&copy; 2026 At 66 Hair & Lifestyle. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Init Vanilla Tilt (already handled by data-attributes, but this ensures smooth loading) -->
+    <script>
+        VanillaTilt.init(document.querySelectorAll(".glass-card"), {
+            max: 15,
+            speed: 400,
+            glare: true,
+            "max-glare": 0.15,
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            requestAnimationFrame(() => {
+                setTimeout(() => document.body.classList.add('loaded'), 50);
+            });
+            document.querySelectorAll('a[href^="/"]').forEach(link => {
+                link.addEventListener('click', e => {
+                    e.preventDefault();
+                    const target = link.getAttribute('href');
+                    document.body.classList.remove('loaded');
+                    document.body.classList.add('exiting');
+                    setTimeout(() => window.location.href = target, 400);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
